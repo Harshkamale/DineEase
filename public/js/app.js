@@ -160,6 +160,7 @@ if (order) {
 var adminAreaPath = window.location.pathname;
 console.log(adminAreaPath);
 if (adminAreaPath.includes('admin')) {
+  (0,_admin__WEBPACK_IMPORTED_MODULE_1__.initAdmin)(socket);
   socket.emit('join', 'adminRoom');
 }
 socket.on('orderUpdated', function (data) {
